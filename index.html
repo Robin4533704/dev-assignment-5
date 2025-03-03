@@ -12,9 +12,9 @@
 
     <title>devBoard</title>
 </head>
-<body id="colorButton" class=" bg-blue-100 px-4 sm:px-8 md:px-16 lg:px-24 py-6">
+<body class="bg-blue-100 px-4 sm:px-8 md:px-16 lg:px-24 py-6">
 
-<section class="container mx-auto  p-6 rounded-2xl shadow-md">
+<section class="container mx-auto p-6 rounded-2xl shadow-md">
     <header class="bg-white p-3 rounded-2xl">
         <nav class="flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center">
@@ -24,40 +24,32 @@
             <div class="flex gap-6 items-center mt-4 md:mt-0">
                <div class="flex items-center gap-4 bg-blue-50 px-6 py-2 pl-2 rounded-full"> 
                     <img src="checkbox.png" alt="">
-                    <h1 class="text-2xl sm:text-3xl font-bold">23</h1>
+                    <h1 class="text-2xl sm:text-3xl font-bold"><span id="taskA">24</span></h1>
                 </div>
-
-                <img  id="color-btn"  class="bg-blue-50 px-4 py-2 rounded-full" src="theme-btn.png" alt="">
+                <img id="colorButton" class="bg-blue-50 px-4 py-2 rounded-full" src="theme-btn.png" alt="">
             </div>
         </nav>
     </header>
 
-    <!-- Second grid -->
-    <div class="flex  justify-between gap-4 pt-4">
-      
-        <div class="bg-white">
+    <div class="flex flex-col sm:flex-row justify-between pt-4">
+        <div class="bg-white flex-1">
             <nav class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
-                <div class="rounded-2xl flex justify-strat items-center gap-6 bg-blue-50 p-6">
-                    <div>
-                        <img class="w-12 h-12" src="checkbox.png" alt="">
-                    </div> 
-                    <div>
-                        <h3 class="text-xl sm:text-2xl">Task Assigned</h3>
-                        <h1 class="text-4xl sm:text-3xl font-bold">05</h1>
-                    </div>
+                <div class="flex items-center gap-4 bg-blue-50 px-6 py-2 pl-2 rounded-2xl">
+                    <img class="pl-4" src="checkbox.png" alt="">
+                    <h3 class="text-xl  pl-4">Completed Tasks:</h3>
+                    <h1 class="text-2xl sm:text-3xl font-bold"><span id="completedCount">0</span></h1>
                 </div>
-    
-                <div id="Discover-box" class="rounded-2xl flex flex-col  gap-4 bg-gradient-to-r from-blue-800 to-blue-400 text-white p-6 ">
-                    <div class="flex   ">
+
+                <div id="Discover-box" class="rounded-2xl flex flex-col gap-4 bg-gradient-to-r from-blue-800 to-blue-400 text-white p-6">
+                    <div class="flex">
                         <img src="board.png" alt=""> 
-                        <div class="">
-                            <h3 class="text-2xl">Discover Something</h3>
-                            <p class="text-2xl">New Today!</p>
+                        <div class="pt-2">
+                            <h3 class="text-2xl">Discover Something New Today!</h3>
                         </div>
                     </div>
                 </div>
-    
-                 <div class="rounded-2xl flex justify-strat items-center bg-blue-50 p-6">
+
+                <div class="rounded-2xl flex justify-start items-center bg-blue-50 p-6">
                     <div class="w-12">
                         <img src="calender.png" alt="">
                     </div>
@@ -65,120 +57,123 @@
                         <h4>Wed,</h4>
                         <h1 class="font-bold">Jul 28 2025</h1>
                     </div>
-                </div> 
+                </div>
             </nav>
-            <!-- grid -->
-            <div class="grid grid-cols-2 grid-rows-3 gap-4 p-4">
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 p-4">
+                <div class="card card-dash bg-blue-50">
+                    <div class="card-body">
+                      <h1 class="bg-white pl-3 w-[120px] rounded-2xl text-xl">ShopEase</h1>
+                      <h1 class="text-2xl font-bold">Fix Mobile Button issue</h1>
+                      <p class="bg-white mt-4 p-4 truncate rounded-2xl w-[250px]">Debug using Chrome DevTools, check for overlapping elements...</p>
+                      <div class="card-actions flex justify-between pt-2 mt-8">
+                        <div>
+                            <p>Deadline</p>
+                            <h1 class="font-bold">21 March 2025</h1>
+                        </div>
+                        <button class="btn btn-primary btn-completed">Completed</button>
+                      </div>
+                    </div>
+                </div>
+                <div class="card card-dash bg-blue-50">
+                    <div class="card-body">
+                      <h1 class="bg-white pl-3 w-[120px] rounded-2xl text-xl">ShopEase</h1>
+                      <h1 class="text-2xl font-bold">Fix Mobile Button issue</h1>
+                      <p class="bg-white mt-4 p-4 truncate rounded-2xl w-[250px]">Debug using Chrome DevTools, check for overlapping elements...</p>
+                      <div class="card-actions flex justify-between pt-2 mt-8">
+                        <div>
+                            <p>Deadline</p>
+                            <h1 class="font-bold">21 March 2025</h1>
+                        </div>
+                        <button class="btn btn-primary btn-completed">Completed</button>
+                      </div>
+                    </div>
+                </div>
+                <div class="card card-dash bg-blue-50">
+                    <div class="card-body">
+                      <h1 class="bg-white pl-3 w-[120px] rounded-2xl text-xl">ShopEase</h1>
+                      <h1 class="text-2xl font-bold">Fix Mobile Button issue</h1>
+                      <p class="bg-white mt-4 p-4 truncate rounded-2xl w-[250px]">Debug using Chrome DevTools, check for overlapping elements...</p>
+                      <div class="card-actions flex justify-between pt-2 mt-8">
+                        <div>
+                            <p>Deadline</p>
+                            <h1 class="font-bold">21 March 2025</h1>
+                        </div>
+                        <button class="btn btn-primary btn-completed">Completed</button>
+                      </div>
+                    </div>
+                </div>
+                <div class="card card-dash bg-blue-50">
+                    <div class="card-body">
+                      <h1 class="bg-white pl-3 w-[120px] rounded-2xl text-xl">ShopEase</h1>
+                      <h1 class="text-2xl font-bold">Fix Mobile Button issue</h1>
+                      <p class="bg-white mt-4 p-4 truncate rounded-2xl w-[250px]">Debug using Chrome DevTools, check for overlapping elements...</p>
+                      <div class="card-actions flex justify-between pt-2 mt-8">
+                        <div>
+                            <p>Deadline</p>
+                            <h1 class="font-bold">21 March 2025</h1>
+                        </div>
+                        <button class="btn btn-primary btn-completed">Completed</button>
+                      </div>
+                    </div>
+                </div>
+                <div class="card card-dash bg-blue-50">
+                    <div class="card-body">
+                      <h1 class="bg-white pl-3 w-[120px] rounded-2xl text-xl">ShopEase</h1>
+                      <h1 class="text-2xl font-bold">Fix Mobile Button issue</h1>
+                      <p class="bg-white mt-4 p-4 truncate rounded-2xl w-[250px]">Debug using Chrome DevTools, check for overlapping elements...</p>
+                      <div class="card-actions flex justify-between pt-2 mt-8">
+                        <div>
+                            <p>Deadline</p>
+                            <h1 class="font-bold">21 March 2025</h1>
+                        </div>
+                        <button class="btn btn-primary btn-completed">Completed</button>
+                      </div>
+                    </div>
+                </div>
+                <div class="card card-dash bg-blue-50">
+                    <div class="card-body">
+                      <h1 class="bg-white pl-3 w-[120px] rounded-2xl text-xl">ShopEase</h1>
+                      <h1 class="text-2xl font-bold">Fix Mobile Button issue</h1>
+                      <p class="bg-white mt-4 p-4 truncate rounded-2xl w-[250px]">Debug using Chrome DevTools, check for overlapping elements...</p>
+                      <div class="card-actions flex justify-between pt-2 mt-8">
+                        <div>
+                            <p>Deadline</p>
+                            <h1 class="font-bold">21 March 2025</h1>
+                        </div>
+                        <button class="btn btn-primary btn-completed">Completed</button>
+                      </div>
+                    </div>
+                </div>
                
-                <div class="card card-dash bg-blue-50 ">
-                    <div class="card-body ">
-                      <h1 class="">ShopEose</h1>
-                      <h1 class="text-2xl font-bold">Fix Mobile Button issue </h1>
-                      <p class="bg-white      p-4 truncate rounded-2xl ">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick wor</p>
-                      <div class="card-actions flex justify-between pt-2">
-                    <div>
-                        <p>Deadlin</p>
-                        <h1 class="font-bold">21 march 2025</h1>
-                    </div>
-                        <button class="btn btn-primary">Completed</button>
-                      </div>
-                    </div>
-                  </div>
-                <div class="card card-dash bg-blue-50 ">
-                    <div class="card-body">
-                      <h1 class="">CloudSync</h1>
-                      <h1 class="text-2xl font-bold">Add Dark Mode</h1>
-                      <p class="bg-white      p-4 truncate rounded-2xl">Store the user's preference in localStorage, update CSS variables </p>
-                      <div class="card-actions flex justify-between pt-2">
-                    <div>
-                        <p>Deadlin</p>
-                        <h1 class="font-bold">21 march 2025</h1>
-                    </div>
-                        <button class="btn btn-primary">Completed</button>
-                      </div>
-                    </div>
-                  </div>
-                <div class="card card-dash bg-blue-50 ">
-                    <div class="card-body">
-                      <h1 class="">ShopEose</h1>
-                      <h1 class="text-2xl font-bold">Add New Emoji </h1>
-                      <p class="bg-white      p-4 truncate rounded-2xl">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick works </p>
-                      <div class="card-actions flex justify-between pt-2">
-                    <div>
-                        <p>Deadlin</p>
-                        <h1 class="font-bold">21 march 2025</h1>
-                    </div>
-                        <button class="btn btn-primary">Completed</button>
-                      </div>
-                    </div>
-                  </div>
-                <div class="card card-dash bg-blue-50 ">
-                    <div class="card-body">
-                      <h1 class="">ShopEose</h1>
-                      <h1 class="text-2xl font-bold">Optimize  Home page</h1>
-                      <p class="bg-white    p-4 truncate rounded-2xl">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick wo</p>
-                      <div class="card-actions flex justify-between pt-2">
-                    <div>
-                       <p>Deadlin</p>
-                        <h1 class="font-bold">21 march 2025</h1>
-                    </div>
-                        <button class="btn btn-primary">Completed</button>
-                      </div>
-                    </div>
-                  </div>
-                <div class="card card-dash bg-blue-50 ">
-                    <div class="card-body">
-                      <h1 class="">ShopEose</h1>
-                      <h1 class="text-2xl font-bold">Integrate OpenAI API  </h1>
-                      <p class="bg-white    p-4 truncate rounded-2xl">Debug using Chrome DevTools Check for overLappi</p>
-                      <div class="card-actions flex justify-between pt-2">
-                    <div>
-                        <p>Deadlin</p>
-                        <h1 class="font-bold">21 march 2025</h1>
-                    </div>
-                        <button class="btn btn-primary">Completed</button>
-                      </div>
-                    </div>
-                  </div>
-                <div class="card card-dash bg-blue-50 ">
-                    <div class="card-body">
-                      <h1 class="">ShopEose</h1>
-                      <h1 class="text-2xl font-bold">Improve Job searching  </h1>
-                      <p class="bg-white  p-4 truncate rounded-2xl">Debug using Chrome DevTools Check for overLappi</p>
-                      <div class="card-actions flex justify-between pt-2">
-                    <div>
-                        <p>Deadlin</p>
-                        <h1 class="font-bold">21 march 2025</h1>
-                    </div>
-                        <button class="btn btn-primary ">Completed</button>
-                      </div>
-                    </div>
-                  </div>
-                 
+                <!-- অন্যান্য card গুলো একইভাবে থাকবে -->
             </div>
         </div>
-       
 
         <div class="bg-white rounded-2xl w-full md:w-[500px] text-center p-6">
            <div class="flex justify-center gap-4 p-6">
                 <img class="w-6 h-6" src="activity.png" alt="">
-                <h1 class="text-2xl sm:text-2xl font-bold">Activity Log</h1> 
-           </div> 
-           <button class="px-6 py-4 bg-gradient-to-r from-purple-400 to-yellow-700 text-white  rounded-xl font-bold  sm:text-xl ">
+                <h1 class="text-2xl font-bold">Activity Log</h1>
+           </div>
+           <button id="toggleButton" class="px-6 py-4 bg-gradient-to-r from-purple-400 to-yellow-700 text-white rounded-xl font-bold text-xl">
                Clear History
            </button>
-           <hr class="mt-8 text-bg-blue-500 font-bold text-4xl">
-          </div>
-       
-
+           <hr class="mt-8">
+           <div id="activityLogContainer" class="mt-4 space-y-2 text-left p-4"></div>
+        </div>
     </div>
 </section>
+
 <script src="js folder/color.js"></script>
+<script src="js folder/addcount.js"></script>
+<script src="js folder/output.js"></script>
+
 </body>
 </html>
+
+
+
+
 
 
 

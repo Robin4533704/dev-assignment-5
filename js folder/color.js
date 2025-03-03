@@ -1,15 +1,16 @@
-const colors = [
-    'bg-red-500','bg-blue-100','bg-green-500','bg-yellow-500','bg-purple-500','bg-pink-500'
-  ];
+ const colors = [
+     'lightblue', 'lightgreen','lightcoral', 'lightgoldenrodyellow', 'lightpink', 'lightskyblue'];
 
-  let colorButton = 0;
-  const button = document.getElementById('colorButton') 
-  button.addEventListener('click',function () {
- button.classList.remove(colors[colorButton]);
+   let currentColorIndex  = 0;
+document.getElementById('colorButton').addEventListener('click', function (){
+  document.body.style.backgroundColor = colors[currentColorIndex];
+  currentColorIndex++;
+  if(currentColorIndex>=colors.length){
+    currentColorIndex=0;
+  }
+  this.style.backgroundColor = colors[currentColorIndex];
 
-colorButton = (colorButton+ 1) % colors.length;
-button.classList.add(colors[colorButton]);
-  });
+})
 
   // button add
   document.getElementById('Discover-box').addEventListener('click', function(){
@@ -17,5 +18,5 @@ window.location.href = "./secend.html";
 
   })
   document.getElementById('back-btn').addEventListener('click', function(){
-    window.location.href = "./index.html";
+    window.location.hre= "./index.html"
   })

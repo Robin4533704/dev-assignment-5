@@ -15,43 +15,52 @@
         <header class="bg-white p-3 rounded-2xl">
             <nav class="flex flex-col md:flex-row justify-between items-center gap-4">
                 <div class="flex items-center">
-                    <img src="logo.png" alt="">
-                    <p class="text-4xl sm:text-5xl text-gray-500">Dev<span class="text-black font-bold">Board</span></p>
+                    <img class="w-8" src="logo.png" alt="">
+                    <p class="text-4xl sm:text-3xl text-gray-500">Dev<span class="text-black font-bold">Board</span></p>
                 </div>
-                <div class="flex gap-6 items-center mt-4 md:mt-0">
-                   <div class="flex items-center gap-4 bg-blue-50 px-6 py-2 pl-2 rounded-full"> 
-                        <img src="checkbox.png" alt="">
-                        <h1 class="text-2xl sm:text-3xl font-bold">23</h1>
-                    </div>
-    
-                    <img  id="color-btn"  class="bg-blue-50 px-4 py-2 rounded-full" src="theme-btn.png" alt="">
-                </div>
+                <button id="back-btn"  class="font-bold text-2xl bg-blue-400 text-white px-8 py-4 rounded-2xl mt-4"> Back To text</button>
             </nav>
         </header>
-        <div>
+      <section class="pt-4">
+        <h1 class="font-bold text-center text-5xl p-8 bg-gray-200 rounded-2xl">Blogs</h1>
+        <div class="pt-6">
             <h1 class="font-bold text-3xl">Question-1: What are the different ways to select an element in the DOM?</h1><br>
             <p class="text-xl">answer: Dom-document object model.
                 1.If any element has an id-
                 const element = document.getElementById('color-button');
+                <br>
                 2.If any element has an class-
                 const element = document.getElementById('myId');
+                <br>
                 3.If any element has an div, tag, p- const accountNumber= document.getElementsByTagName('div');
-                3.If any element has an input name-const pin = document.getElementsByName('username').value;
+                <br>
+                4.If any element has an input name-const pin = document.getElementsByName('username').value;
             </p>
             <br>
             <h1 class="font-bold text-3xl">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
-            <p></p>
+            <br>
+            <p class="text-2xl">innerHTML:
+                Shows or sets the entire content including HTML code. That is, it shows everything with tags</p>
+                <p class="text-2xl">innerText:It shows or sets only the text that is visible on the screen.
+                    Text hidden with CSS is not captured here.
+                    Text is rendered according to line breaks or styles.</p>
+                <p class="text-2xl">textcontent:It shows or sets all the text of the element,
+                    Want it to be hidden or visible.
+                    No HTML tags, just plain text.</p>
+                    
             <br>
             <h1 class="font-bold text-3xl">Question-3: What is event delegation in the DOM?</h1>
+            <p class="text-2xl">Event Delegation:Event delegation is a JavaScript technique that uses event propagation to attach a single event listener to a parent element</p>
             <br>
             <h1 class="font-bold text-3xl">Question-4: What is event bubbling in the DOM?</h1>
-            <p></p>
+            <p class="text-2xl">Event bubbling: Event bubbling is a process of events in the DOM, where when an event occurs in a child element (such as a click), that event gradually spreads to the top of the entire DOM (up to the root) through its parent, grandparent.</p>
+        
             <br>
             <h1 class="font-bold text-3xl">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
-            <p>answer:</p>
+            <p class="text-2xl">answer:Creating, adding, and removing elements in JavaScript can be done using the DOM (Document Object Model).</p>
         </div>
-        <button id="back-btn"  class="font-bold text-3xl bg-green-600 text-white px-8 py-4 rounded-2xl mt-4"> Back </button>
-    </section>
+      </section>
+ </section>
 
 
     <script>
